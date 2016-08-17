@@ -25,7 +25,7 @@ function Fcheck() {
                 form = form[0];
             }
             tar = $(form);
-            var time = tar.attr('startdate');	//开始时间，不填不验证
+            var time = tar.attr('startdate');	//开始时间，不填不验证 参数在作为form标签的属性存在
             if (time) {
                 time = parseInt(time);
                 var now = (new Date()).getTime();
@@ -34,7 +34,7 @@ function Fcheck() {
                     return;
                 }
             }
-            var time = tar.attr('enddate');		//截止时间，不填不验证
+            var time = tar.attr('enddate');		//截止时间，不填不验证 参数在作为form标签的属性存在
             if (time) {
                 time = parseInt(time);
                 var now = (new Date()).getTime();
@@ -96,7 +96,7 @@ function Fcheck() {
             but.attr("value", "数据提交成功");
             showTip("数据提交成功");
         }
-        var red = form.getAttribute('redirect');//事先定义的跳转地址
+        var red = form.getAttribute('redirect');//事先定义的跳转地址 参数在作为form标签的属性存在
         if (red) {
             window.location.href = red;
         }
